@@ -1,0 +1,99 @@
+.upload-container{
+	
+	boarder: 1px solid black;
+	margin: 0 auto;
+	width: 900px;
+	margin-top: 40px;
+	.dramatic-title{
+		font-size: 100px;
+		padding: 50px;
+		text-align: center;
+		font-weight: 400;
+	}
+	form{
+		margin-top: 40px;
+		text-align: center;
+		.btn-file {
+		    position: relative;
+		    overflow: hidden;
+		    margin: 10px;
+		    margin: 0 auto;
+		    width: 100px;
+		    text-align: center;
+		    padding-top: 15px;
+		    padding-bottom: 15px;
+		    padding-left: 30px;
+		    padding-right: 30px;
+		    font-size: 20px;
+		    border: 2px solid #F2A15A;
+		    border-radius: 5px;
+		    cursor: pointer;
+		    &:hover{
+		    	background: #F2A15A;
+		    }
+		}
+		.btn-file input {
+		    position: absolute;
+		    display: block;
+		    top: 0;
+		    right: 0;
+		    margin: 0;
+		    padding: 0;
+		    font-size: 20px;
+		    cursor: pointer;
+		    opacity: 0;
+		    filter: alpha(opacity=0);
+		}
+		#csv-upload{
+			position: relative;
+		    overflow: hidden;
+		    margin-top: 40px;
+		    width: 180px;
+		    text-align: center;
+		    padding-top: 15px;
+		    padding-bottom: 15px;
+		    padding-left: 30px;
+		    padding-right: 30px;
+		    font-size: 20px;
+		    border: 2px solid #53E692;
+		    border-radius: 5px;
+		    background: none;
+		    color: #FFFFFF;
+		    cursor: pointer;
+		    &:hover{
+		    	background: #53E692;
+		    }
+		}
+	}
+	.table-container{
+		height: 500px;
+		width: 600px;
+		margin: 0 auto;
+		margin-top: 30px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		padding: 10px;
+		background: #FFFFFF; 
+		.table{
+			display: table;
+			width: 100%;
+			margin: 0 auto;
+			height: 600px;
+			overflow: hidden;
+			color: #F2A15A;
+			.table-row{
+				display: table-row;
+				width: 100%;
+				.table-cell{
+					display: table-cell;
+					padding: 10px;
+					&:hover{
+						color: #FFFFFF;
+						background: #F2A15A;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}

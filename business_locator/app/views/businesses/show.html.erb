@@ -1,0 +1,30 @@
+<div id="notice"><%= notice %></div>
+<div class="upload-container">
+	<div class="dramatic-title"><%= @business.name %></div>
+	<div class="table-container">
+		<div class="table">
+			<div class="table-row">
+				<div class="table-cell">Address</div>
+<!-- 				<div class="table-cell">City</div>
+				<div class="table-cell">State</div> -->
+				<div class="table-cell">Postal Code</div>
+				<!-- <div class="table-cell">Country</div> -->
+				<div class="table-cell">Latitude</div>
+				<div class="table-cell">Longitude</div>
+			</div>
+			<% @locations.each do |location| %>
+			<div class="table-row">
+				<div class="table-cell"><%= location.address %></div>
+<!-- 				<div class="table-cell"><%= location.city %></div>
+				<div class="table-cell"><%= location.state %></div> -->
+				<div class="table-cell"><%= location.postal_code %></div>
+				<!-- <div class="table-cell"><%= location.country %></div> -->
+				<div class="table-cell"><%= location.latitude.to_f %></div>
+				<div class="table-cell"><%= location.longitude.to_f %></div>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+<% link_to 'Edit', edit_business_path(@business) %> |
+<% link_to 'Back', businesses_path %>

@@ -1,0 +1,11 @@
+<div class="upload-container">
+  <div class='dramatic-title'>Upload File</div>
+  <%= form_tag import_business_locations_path, multipart: true do %>
+    <div class="btn-file">
+        Choose File
+        <%= file_field_tag :file %>
+    </div>
+    <%= submit_tag "Import CSV", id: 'csv-upload' %>
+  <% end %>
+</div>
+<div id="notice"><%= notice %></div>

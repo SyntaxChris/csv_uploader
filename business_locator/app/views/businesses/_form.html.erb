@@ -1,0 +1,42 @@
+<%= form_for(@business) do |f| %>
+  <% if @business.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@business.errors.count, "error") %> prohibited this business from being saved:</h2>
+
+      <ul>
+      <% @business.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <hr />
+  <% counter = 1 %>
+  <%= f.fields_for :locations do |location| %>
+  <div style="display: table">
+    <div style="display: table-row">Location <%= counter %></div>
+    <div style="display: table-row">
+      <div style="display: table-cell"><%= location.text_field :address, placeholder: "address" %></div>
+      <div style="display: table-cell"><%= location.text_field :city, placeholder: "city" %></div>
+      <div style="display: table-cell"><%= location.text_field :state, placeholder: "state" %></div>
+      <div style="display: table-cell"><%= location.text_field :postal_code, placeholder: "postal code" %></div>
+      <div style="display: table-cell"><%= location.text_field :country, placeholder: "country" %></div>
+      <div style="display: table-cell"><%= location.text_field :latitude, placeholder: "latitude" %></div>
+      <div style="display: table-cell"><%= location.text_field :longitude, placeholder: "longitude" %></div>
+    </div>
+  </div>
+  <% counter += 1 %>
+  <% end %>
+
+  
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
